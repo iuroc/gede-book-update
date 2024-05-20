@@ -34,10 +34,8 @@ export class DataWork {
     }
 
     async initTempTable() {
-        let connection: PoolConnection | undefined
-        try {
-            connection = await this.pool.getConnection()
-            await connection.query(`CREATE TABLE IF NOT EXISTS \`${this.tempTable}\` (
+        const connection = await this.pool.getConnection()
+        await connection.query(`CREATE TABLE IF NOT EXISTS \`${this.tempTable}\` (
                 \`row_id\` INT PRIMARY KEY AUTO_INCREMENT,
                 \`name\` VARCHAR(300) COMMENT '书刊名称',
                 \`author\` VARCHAR(300) COMMENT '图书作者',
@@ -55,10 +53,6 @@ export class DataWork {
                 \`is_book\` INT COMMENT '是否图书',
                 \`type\` VARCHAR(5) COMMENT 'HY或GD'
             )`)
-        } catch {
-        } finally {
-            connection?.release()
-        }
     }
 
     async start() {
