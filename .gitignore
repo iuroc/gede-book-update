@@ -1,0 +1,4 @@
+node_modules/
+js/
+book.sql
+package-lock.json
