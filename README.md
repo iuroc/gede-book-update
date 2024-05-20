@@ -2,9 +2,21 @@
 
 > 歌德电子书数据更新程序
 
-## 程序原理
+## 快速开始
 
-1. 使用 MySQL 管理数据，创建一个临时表
-2. 遍历图书和期刊类目，获得图书和期刊列表
-3. 分批次批量将数据插入临时表，插入时使用 `OR IGNORE`
-4. 删除原表，将临时表重命名为原表
+```bash
+npm install gede-book-update
+```
+
+```ts
+import { DataWork } from 'gede-book-update'
+
+await new DataWork({
+    user: 'root',
+    password: '12345678',
+    table: 'book',
+    database: 'gede-book'
+}).start()
+
+console.log('更新完成')
+```
