@@ -6,5 +6,29 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.12"
-  }
+  },
+  "types": "src/main.mts",
+  "name": "gede-book-update",
+  "description": "> 歌德电子书数据更新程序",
+  "version": "1.0.0",
+  "main": "js/main.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iuroc/gede-book-update.git"
+  },
+  "keywords": [
+    "book",
+    "read",
+    "update",
+    "api"
+  ],
+  "author": "iuroc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iuroc/gede-book-update/issues"
+  },
+  "homepage": "https://github.com/iuroc/gede-book-update#readme"
 }
