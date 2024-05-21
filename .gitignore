@@ -1,4 +1,5 @@
 node_modules/
 js/
-book.sql
+*.sql
+*.zip
 package-lock.json
